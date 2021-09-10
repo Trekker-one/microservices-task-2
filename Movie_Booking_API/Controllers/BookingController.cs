@@ -22,6 +22,9 @@ namespace Movie_Booking_API.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// View All Bookings
+        /// </summary>
         [HttpGet("AllBookings")]
         public IActionResult Get()
         {
@@ -31,6 +34,22 @@ namespace Movie_Booking_API.Controllers
             return new JsonResult(bookings);
         }
 
+        /// <summary>
+        /// Add booking from body data
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Add
+        ///     {
+        ///        "Id": "1a",
+        ///        "Date": "09/10/2021",
+        ///        "Time": "16:38",
+        ///        "Numbers_ofTickets": 1,
+        ///        "Amount": 7
+        ///     }
+        ///
+        /// </remarks>
         [HttpPost("Add")]
         public IActionResult Add([FromBody] Booking booking)
         {
@@ -40,6 +59,22 @@ namespace Movie_Booking_API.Controllers
             return Ok("Add success");
         }
 
+        /// <summary>
+        /// Deletes a specific booking in body data.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     DELETE /Delete
+        ///     {
+        ///        "Id": "1a",
+        ///        "Date": "09/10/2021",
+        ///        "Time": "16:38",
+        ///        "Numbers_ofTickets": 1,
+        ///        "Amount": 7
+        ///     }
+        ///
+        /// </remarks>
         [HttpDelete("Delete")]
         public IActionResult Del([FromBody] Booking booking)
         {
@@ -49,6 +84,22 @@ namespace Movie_Booking_API.Controllers
             return Ok("Delete success");
         }
 
+        /// <summary>
+        /// Update a specfic booking in body data
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     PUT /Update
+        ///     {
+        ///        "Id": "1a",
+        ///        "Date": "09/10/2021",
+        ///        "Time": "16:38",
+        ///        "Numbers_ofTickets": 1,
+        ///        "Amount": 8
+        ///     }
+        ///
+        /// </remarks>
         [HttpPut("Update")]
         public IActionResult Update([FromBody] Booking booking)
         {
@@ -58,6 +109,9 @@ namespace Movie_Booking_API.Controllers
             return Ok("Update success");
         }
 
+        /// <summary>
+        /// Get a booking info by booking Id
+        /// </summary>
         [HttpGet("{id}")]
         public IActionResult GetById(string id)
         {

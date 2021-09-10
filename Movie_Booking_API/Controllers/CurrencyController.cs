@@ -14,6 +14,10 @@ namespace Movie_Booking_API.Controllers
     [ApiController]
     public class CurrencyController : ControllerBase
     {
+        /// <summary>
+        /// Get the sgd number based on the label of currency and amount
+        /// </summary>
+        /// <remarks>
         [HttpGet("{amount}/{label}")]
         public async Task<IActionResult> Get(double amount, string label)
         {
