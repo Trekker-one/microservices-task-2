@@ -33,3 +33,5 @@ C:\Users\Huang Yuzhe\source\repos\Movie_Booking_API\Movie_Booking_API\obj\Debug\
 C:\Users\Huang Yuzhe\source\repos\Movie_Booking_API\Movie_Booking_API\obj\Debug\net5.0\ref\Movie_Booking_API.dll
 C:\Users\Huang Yuzhe\source\repos\Movie_Booking_API\Movie_Booking_API\obj\Debug\net5.0\Movie_Booking_API.pdb
 C:\Users\Huang Yuzhe\source\repos\Movie_Booking_API\Movie_Booking_API\obj\Debug\net5.0\Movie_Booking_API.genruntimeconfig.cache
+C:\Users\Huang Yuzhe\source\repos\Movie_Booking_API\Movie_Booking_API\bin\Debug\net5.0\Movie_Booking_API.xml
+C:\Users\Huang Yuzhe\source\repos\Movie_Booking_API\Movie_Booking_API\obj\Debug\net5.0\Movie_Booking_API.xml

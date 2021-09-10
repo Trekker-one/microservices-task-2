@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Movie_Booking_API</name>
+    </assembly>
+    <members>
+        <member name="M:Movie_Booking_API.Controllers.BookingController.Get">
+            <summary>
+            View All Bookings
+            </summary>
+        </member>
+        <member name="M:Movie_Booking_API.Controllers.BookingController.Add(Movie_Booking_API.Models.Booking)">
+             <summary>
+             Add booking from body data
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Add
+                 {
+                    "Id": "1a",
+                    "Date": "09/10/2021",
+                    "Time": "16:38",
+                    "Numbers_ofTickets": 1,
+                    "Amount": 7
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:Movie_Booking_API.Controllers.BookingController.Del(Movie_Booking_API.Models.Booking)">
+             <summary>
+             Deletes a specific booking in body data.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 DELETE /Delete
+                 {
+                    "Id": "1a",
+                    "Date": "09/10/2021",
+                    "Time": "16:38",
+                    "Numbers_ofTickets": 1,
+                    "Amount": 7
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:Movie_Booking_API.Controllers.BookingController.Update(Movie_Booking_API.Models.Booking)">
+             <summary>
+             Update a specfic booking in body data
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 PUT /Update
+                 {
+                    "Id": "1a",
+                    "Date": "09/10/2021",
+                    "Time": "16:38",
+                    "Numbers_ofTickets": 1,
+                    "Amount": 8
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:Movie_Booking_API.Controllers.BookingController.GetById(System.String)">
+            <summary>
+            Get a booking info by booking Id
+            </summary>
+        </member>
+        <member name="M:Movie_Booking_API.Controllers.CurrencyController.Get(System.Double,System.String)">
+             <summary>
+             Get the "sgd" number based on the label of currency (Like "xpf") and amount
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /5/xpf
+            
+             </remarks>
+        </member>
+    </members>
+</doc>

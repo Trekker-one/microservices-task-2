@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using System.IO;
 
 namespace Movie_Booking_API
 {
@@ -48,6 +50,11 @@ namespace Movie_Booking_API
                         Url = new Uri("https://example.license.com")
                     }
                 });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
 
             services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase("db_local"));
